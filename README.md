@@ -8,5 +8,5 @@ No of files are created on purpose to learn about how to work with multiple
 More contents will be added as i get to learn something new.
 
 contents:
-    * linklist
-        gcc -Wall -o linklist link_list.c createlinklist.c reverselinklist.c traverselinklist.c check.c
+1. linklist
+* gcc -Wall -o linklist link_list.c createlinklist.c reverselinklist.c traverselinklist.c check.c
