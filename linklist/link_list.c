@@ -1,11 +1,7 @@
-#include "createlinklist.h"
-#include "traverselinklist.h"
-#include "reverselinklist.h"
-#include "node.h"
-#include "check.h"
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
+#include "node.h"
 
 struct Node *node, *ptr, *prev, *header=NULL, *tmp=NULL;
 

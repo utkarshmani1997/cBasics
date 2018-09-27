@@ -17,9 +17,7 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-#include "traverselinklist.h"
 #include "node.h"
-#include "check.h"
 // traverse print all the data in the link list.
 void traverse() {
     printf("traverse the link list\n");

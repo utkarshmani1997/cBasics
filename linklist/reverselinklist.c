@@ -17,9 +17,7 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-#include "reverselinklist.h"
 #include "node.h"
-#include "check.h"
 // reverse_list reverses the list in one pass.
 void reverse_list() {
     printf("reverse the link list\n");

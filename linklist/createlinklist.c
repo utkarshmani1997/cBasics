@@ -17,9 +17,7 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-#include "createlinklist.h"
 #include "node.h"
-#include "check.h"
 // create_link_lists create a link list and fills random data.
 void create_link_list() {
     printf("Create a link list of size 5\n");
