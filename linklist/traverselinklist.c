@@ -18,8 +18,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "node.h"
+int length;
 // traverse print all the data in the link list.
 void traverse() {
+    length = 0;
     printf("traverse the link list\n");
     node = header;
     if (!check(node)) {
@@ -29,5 +31,6 @@ void traverse() {
     while(node != NULL) {
         printf("data: %d\n", node->data);
         node=node->next;
+        length++;
     }
 }

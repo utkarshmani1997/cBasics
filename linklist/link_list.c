@@ -23,6 +23,12 @@ int main() {
     traverse();
     reverse_list();
     traverse();
+    insert_at_begining();
+    traverse();
+    insert_at_last();
+    traverse();
+    insert_at_any(8);
+    traverse();
     free_memory();
     return 0;
 }
