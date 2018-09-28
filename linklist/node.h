@@ -34,3 +34,5 @@ extern void reverse_list();
 extern void insert_at_begining();
 extern void insert_at_last();
 extern void insert_at_any(int x);
+extern void delete_at_begining();
+extern void delete_at_any(int x);

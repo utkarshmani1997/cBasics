@@ -29,6 +29,10 @@ int main() {
     traverse();
     insert_at_any(8);
     traverse();
+    delete_at_begining();
+    traverse();
+    delete_at_any(5);
+    traverse();
     free_memory();
     return 0;
 }
