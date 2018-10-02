@@ -13,4 +13,7 @@ contents:
 2. doubly linklist
 * gcc -Wall -o doubly_link_list doubly_link_list.c createdoublylinklist.c traverselinklist.c check.c delete.c
 3. stack
-* gcc -Wall -o stack stack.h stack.c push.c pop.c peek.c check.c
+    - using linklist
+    * gcc -Wall -o stack stack.h stack.c push.c pop.c peek.c check.c
+    - using array
+    * gcc -Wall -o stack stack.c
