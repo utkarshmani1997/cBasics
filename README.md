@@ -17,3 +17,16 @@ contents:
     * gcc -Wall -o stack stack.h stack.c push.c pop.c peek.c check.c
     - using array
     * gcc -Wall -o stack stack.c
+4. queue
+    - using linklist
+    - queue
+    * gcc -Wall -o queue queue.h queue.c enqueue.c dequeue.c peek.c check.c
+    - circular queue
+    * gcc -Wall -o circular_queue queue.h queue.c enqueue.c dequeue.c peek.c check.c
+    - using array
+    - queue
+    * gcc -Wall -o queue queue.c
+    - circular queue
+    * gcc -Wall -o circular_queue circular_queue.c
+
+

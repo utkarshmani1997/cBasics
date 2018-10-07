@@ -29,5 +29,7 @@ extern struct stackNode *node, *ptr, *top;
 extern int length;
 extern bool check(struct stackNode *newptr);
 extern void push(int x);
-extern void pop();
+extern int pop();
 extern void peek();
+extern void reverse();
+extern void Sort();

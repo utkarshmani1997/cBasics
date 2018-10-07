@@ -18,15 +18,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "stack.h"
+#include <limits.h>  //INT_MIN
 
-void pop() {
+int pop() {
     if (!check(top)) {
         printf("can't pop\n");
-        return;
+        return INT_MIN;
     }
     ptr = top;
     top = ptr->next;
+    int tmp = ptr->data;
     printf("pop: %d\n", ptr->data);
     length--;
     free(ptr);
+    return tmp;
 }
