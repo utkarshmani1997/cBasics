@@ -12,5 +12,10 @@ int main() {
     // in general we can represent the output
     // as y = x / 2^n for the leftshift.
     printf("x >> 1 = %d\n", x >> 1);
+
+    int a = 0, i = 0;
+    for (i = 0; i < 10; i++) {
+        printf("%d\t%d\n", a++, a++);
+    }
     return 0;
 }
