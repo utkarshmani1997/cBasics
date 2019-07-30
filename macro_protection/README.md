@@ -24,3 +24,14 @@ can enable/disable the code at comile time.
     Debug mode
     Hi! This is utkarsh
     ```
+- Can we have more than one main function in one file ?
+    - yes, indeed using macros we can define multiple main functions.
+      without macros it will give an error like this
+      ```
+      test.c:15:5: error: redefinition of ‘main’
+      int main() {
+      ^
+      test.c:4:5: note: previous definition of ‘main’ was here
+      int main() {
+      ```
+    - other way is to recursively call main function from main().
