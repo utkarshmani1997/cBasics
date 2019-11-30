@@ -32,6 +32,9 @@ int main()
         // insert after shyam
         LIST_INSERT_AFTER(shyam, ghanshyam, next);
         Student *stud;
+//        free(ram);
+//        free(shyam);
+//        free(ghanshyam);
         LIST_FOREACH(stud, &students, next) {
                 printf("name: %s, age: %d\n", stud->name, stud->age);
         }

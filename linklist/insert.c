@@ -21,22 +21,25 @@
 
 void insert_at_begining() {
     printf("Insert at begining of the list\n");
+    int len = header->length;
     node = malloc(sizeof(struct Node));
     if (!check(node)){
         return;
     }
     node->data = rand();
-    node->next = header;
-    header = node;
+    node->next = header->node;
+    header->node = node;
+    header->length = len;
+    header->length++;
 }
 
 void insert_at_last() {
     printf("Insert at last of the list\n");
-    if (header == NULL) {
+    if (header->node == NULL) {
         insert_at_begining();
         return;
     }
-    ptr = header;
+    ptr = header->node;
     while(ptr->next != NULL){
       ptr = ptr->next;
     }
@@ -47,6 +50,7 @@ void insert_at_last() {
     ptr->next = node;
     node->data = rand();
     node->next = NULL;
+    header->length++;
 }
 
 void insert_at_any(int x) {
@@ -56,15 +60,15 @@ void insert_at_any(int x) {
         insert_at_begining();
         return;
     }
-    if (x == length){
+    if (x == header->length){
         insert_at_last();
         return;
     }
-    if (x > length) {
-        printf("length of list is %d, but trying to access %d\n", length, x);
+    if (x > header->length) {
+        printf("length of list is %d, but trying to access %d\n", header->length, x);
         return;
     }
-    ptr = header;
+    ptr = header->node;
     while(count < x){
        prev = ptr;
        ptr = ptr->next;
@@ -77,4 +81,5 @@ void insert_at_any(int x) {
     prev->next = node;
     node->data = rand();
     node->next = ptr;
+    header->length++;
 }

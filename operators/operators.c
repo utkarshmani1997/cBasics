@@ -17,5 +17,10 @@ int main() {
     for (i = 0; i < 10; i++) {
         printf("%d\t%d\n", a++, a++);
     }
+
+    int count = 0;
+    count = count++;
+    printf("%d\n", count);
+
     return 0;
 }

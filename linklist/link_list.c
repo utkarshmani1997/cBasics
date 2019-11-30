@@ -3,11 +3,12 @@
 #include <stdlib.h>
 #include "node.h"
 
-struct Node *node, *ptr, *prev, *header=NULL, *tmp=NULL;
+struct Node *node, *ptr, *prev, *tmp=NULL;
+struct Head *header=NULL;
 
 void free_memory(){
    printf("free the link list\n");
-   node=header;
+   node=header->node;
    if (!check(node)){
         return;
    }
@@ -19,6 +20,7 @@ void free_memory(){
 }
 
 int main() {
+    header = malloc(sizeof(header));
     create_link_list();
     traverse();
     reverse_list();

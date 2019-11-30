@@ -23,10 +23,15 @@ struct Node {
    struct Node *next;
 };
 
+struct Head {
+    int length;
+    struct Node *node;
+};
+
 // extern keyword is used such that the variables or functions
 // with this keyword can be accessed across various files.
-extern struct Node *node, *ptr, *prev, *header, *tmp;
-extern int length;
+extern struct Node *node, *ptr, *prev, *tmp;
+extern struct Head *header;
 extern bool check(struct Node *newptr);
 extern void traverse();
 extern void create_link_list();

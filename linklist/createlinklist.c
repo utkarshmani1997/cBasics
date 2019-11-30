@@ -3,7 +3,7 @@
  *
  *       Filename:  createlinklist.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  Tuesday 25 September 2018 02:55:02  IST
@@ -23,7 +23,7 @@ void create_link_list() {
     printf("Create a link list of size 5\n");
     int i = 0;
         while(i < 5){
-        if (header == NULL) {
+        if (header->node == NULL) {
            // typecasting is not neccessry in c, its automatically
            // done by the compiler itself. Both of the below ways are
            // valid.
@@ -33,7 +33,7 @@ void create_link_list() {
                return;
             }
             node->data = rand();
-            header = node;
+            header->node = node;
         }
         else {
            // node->next = (struct Node *)malloc(sizeof(struct Node));
@@ -44,7 +44,9 @@ void create_link_list() {
             node=node->next;
             node->data= rand();
         }
-            node->next=NULL;
-            i++;
+        node->next=NULL;
+        i++;
+        header->length++;
     }
+    printf("Length: %d\n", header->length);
 }

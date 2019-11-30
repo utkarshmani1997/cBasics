@@ -3,7 +3,7 @@
  *
  *       Filename:  traverselinklist.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  Tuesday 25 September 2018 02:52:57  IST
@@ -18,19 +18,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "node.h"
-int length;
 // traverse print all the data in the link list.
 void traverse() {
-    length = 0;
     printf("traverse the link list\n");
-    node = header;
+    node = header->node;
     if (!check(node)) {
         return;
     }
-    printf("Header: %p\n", header);
+    printf("Header: %p, Length: %d\n", header, header->length);
     while(node != NULL) {
         printf("data: %d\n", node->data);
         node=node->next;
-        length++;
     }
 }

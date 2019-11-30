@@ -21,12 +21,15 @@
 
 void delete_at_begining() {
     printf("delete at begining\n");
-    if (header == NULL) {
+    if (header->node == NULL) {
         printf("can't delete, no list available\n");
         return;
     }
-    ptr = header;
-    header = ptr->next;
+    ptr = header->node;
+    int len = header->length;
+    header->node = ptr->next;
+    header->length = len;
+    header->length--;
     free(ptr);
 }
 
@@ -37,16 +40,17 @@ void delete_at_any(int x) {
         delete_at_begining();
         return;
     }
-    if (x > length) {
-        printf("can't delete, length of list is %d, trying to delete %d\n", length, x);
+    if (x > header->length) {
+        printf("can't delete, length of list is %d, trying to delete %d\n", header->length, x);
         return;
     }
-    ptr = header;
+    ptr = header->node;
     while (count < x) {
         prev = ptr;
         ptr = ptr->next;
         count++;
     }
     prev->next = ptr->next;
+    header->length--;
     free(ptr);
 }

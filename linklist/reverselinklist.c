@@ -3,14 +3,14 @@
  *
  *       Filename:  reverselinklist.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  Tuesday 25 September 2018 02:49:34  IST
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Utkarsh Mani Tripathi 
+ *         Author:  Utkarsh Mani Tripathi
  *   Organization:  cBasics
  *
  * =====================================================================================
@@ -21,7 +21,8 @@
 // reverse_list reverses the list in one pass.
 void reverse_list() {
     printf("reverse the link list\n");
-    node = header;
+    node = header->node;
+    int len = header->length;
     prev = NULL;
     if (!check(node)){
         return;
@@ -32,6 +33,7 @@ void reverse_list() {
         prev=node;
         node=tmp;
     }
-    header=prev;
+    header->node=prev;
+    header->length = len;
 }
 
