@@ -27,7 +27,12 @@ void traverse() {
     }
     printf("Header: %p, Length: %d\n", header, header->length);
     while(node != NULL) {
-        printf("data: %d\n", node->data);
+/*        if (node->visited) {
+                printf("loop detected");
+                return;
+        }
+*/        printf("data: %d\n", node->data);
+ //       node->visited=true;
         node=node->next;
     }
 }
